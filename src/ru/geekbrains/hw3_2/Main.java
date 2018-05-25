@@ -33,7 +33,6 @@ public class Main {
             usersWord[i]='#';
         }
         String attempt ;//попытка
-        int charNumber;//для определения где букв меньше в искомом слове или в попытке
         System.out.println("Слово загадано");
         while (true)
         {
@@ -45,10 +44,7 @@ public class Main {
                 break;
             } else
             {
-                charNumber=attempt.length();//коряво, но не сообразил как лучше сделать=(
-                if (attempt.length()>word.length())
-                {charNumber=word.length();}
-                for (int i = 0; i <charNumber ; i++) {
+                for (int i = 0; i <attempt.length()&&i<word.length() ; i++) {
                     if (word.charAt(i)==attempt.charAt(i))
                     {
                         usersWord[i]=word.charAt(i);
